@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#modal{
+    width: 100%;
+    position: fixed;
+    height: 100vh;
+    display: none;
+    background: rgba(0,0,0,0.25);
+}
+#create{
+    margin: auto;
+    width: 550px;
+    background: white;
+    border-radius: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.settings{
+    font-size: 35px;
+    margin: 20px auto;
+}
+#create label, .title_select{
+    margin-bottom: 7px;
+    margin-left: 10px;
+    display: flex;
+    font-size: 25px;
+}
+#count_symb{
+    margin-left: 10px;
+    font-size: 17px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: lightgray;
+}
+.input_settings{
+    margin-left: 10px;
+    font-size: 17px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    background: #EBEBEB;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+#create textarea{
+    resize: vertical;
+    margin-bottom: 10px;
+}
+#dateTime{
+    width: 200px;
+}
+.title_select{
+    margin-right: auto;
+    margin-left: auto;
+}
+.number{
+    font-size: 23px;
+}
+.checkboxes{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 30px;
+}
+.selection_checkbox{
+    width: 100%;
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-around;
+}
+.checkbox_selection{
+    margin-top: auto;
+    width: 20px;
+    height: 20px;
+    margin-bottom: auto;
+}
+.buttons{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-around;
+}
+.buttons button{
+    width: 250px;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+#save{
+    background: green;
+}
+#delete{
+    background: red;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.teerlist_container{
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+}
+.red{
+    color: red;
+}
+
+.teer_row{
+    padding-top: 10px;
+    min-height: 60px;
+    padding-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: initial;
+    flex-wrap: wrap;
+}
+#N{
+    border: 1px solid black;
+}
+.element_teer{
+    display: flex;
+    justify-content: center;
+
+
+    text-align: center;
+    width: 170px;
+    padding: 5px 10px;
+    min-height: 50px;
+    word-wrap: break-word;
+    margin-right: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    color: white;
+    background: blue;
+}
+.table{
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    background: #1a1a17;
+}
+.table_row{
+    display: flex;
+    min-height: 100px;
+    border: 1px solid black;
+}
+.title_row{
+    flex: 0 0 150px;
+    min-height: 100px;
+    display: flex;
+    font-size: 40px;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+.S{
+    background: rgb(255, 127, 127);
+}
+.A{
+   background: rgb(255, 191, 127);
+}
+.B{
+    background: rgb(255, 223, 127);
+}
+.C{
+    background: rgb(255, 255, 127);
+}
+.D{
+    background: rgb(191, 255, 127);
+}
+.teer_table_row{
+    margin: auto;
+    width: 100%;
+}
+.buttons_teerlist{
+    display: flex;
+    margin-bottom: 10px;
+}
+.btns_tierlist{
+    padding: 8px 15px;
+    font-size: 17px;
+    background: #0094FF;
+    color: white;
+    margin-right: 10px;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+#close{
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+#close:hover{
+    cursor: pointer;
+}

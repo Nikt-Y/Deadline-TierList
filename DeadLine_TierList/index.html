@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeadLine TierList</title>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+<div id="modal">
+    <div id="create">
+        <img id="close" src="close.png"/>
+        <div class="settings">Параметры дедлайна</div>
+
+        <label for="title">Название<div class="red">*</div><div id="count_symb">Осталось 30 симв.</div></label>
+        <input class="input_settings" maxlength="30" oninput="changeTextSize(this.value)" type="text" id="title" placeholder="Про что дедлайн?">
+
+        <label for="description">Описание</label>
+        <textarea  class="input_settings" rows="5" cols="30" id="description" placeholder="Распишите подробнее"></textarea>
+
+        <label for="dateTime">Дата и время<div class="red">*</div></label>
+        <input class="input_settings" type="datetime-local" id="dateTime" placeholder="Про что дедлайн?">
+
+
+        <div class="title_select">Важность</div>
+        <div class="selection_checkbox">
+            <div class="number">1</div>
+            <div class="checkboxes">
+                <input type="radio" checked name="importance[]" class="checkbox_selection importance">
+                <input type="radio" name="importance[]" class="checkbox_selection importance">
+                <input type="radio" name="importance[]" class="checkbox_selection importance">
+                <input type="radio" name="importance[]" class="checkbox_selection importance">
+                <input type="radio" name="importance[]" class="checkbox_selection importance">
+                <input type="radio" name="importance[]" class="checkbox_selection importance">
+                <input type="radio" name="importance[]" class="checkbox_selection importance">
+                <input type="radio" name="importance[]" class="checkbox_selection importance">
+                <input type="radio" name="importance[]" class="checkbox_selection importance">
+                <input type="radio" name="importance[]" class="checkbox_selection importance">
+            </div>
+            <div class="number">10</div>
+        </div>
+
+        <div class="title_select">Возможность просрочки</div>
+        <div class="selection_checkbox">
+            <div class="number">1</div>
+            <div class="checkboxes">
+                <input type="radio" checked name="canDelay[]" class="checkbox_selection delay">
+                <input type="radio" name="canDelay[]" class="checkbox_selection delay">
+                <input type="radio" name="canDelay[]" class="checkbox_selection delay">
+                <input type="radio" name="canDelay[]" class="checkbox_selection delay">
+                <input type="radio" name="canDelay[]" class="checkbox_selection delay">
+                <input type="radio" name="canDelay[]" class="checkbox_selection delay">
+                <input type="radio" name="canDelay[]" class="checkbox_selection delay">
+                <input type="radio" name="canDelay[]" class="checkbox_selection delay">
+                <input type="radio" name="canDelay[]" class="checkbox_selection delay">
+                <input type="radio" name="canDelay[]" class="checkbox_selection delay">
+            </div>
+            <div class="number">10</div>
+        </div>
+
+
+        <div class="title_select">Сложность</div>
+        <div class="selection_checkbox">
+            <div class="number">1</div>
+            <div class="checkboxes">
+                <input type="radio" checked name="complexity[]" class="checkbox_selection complexity">
+                <input type="radio" name="complexity[]" class="checkbox_selection complexity">
+                <input type="radio" name="complexity[]" class="checkbox_selection complexity">
+                <input type="radio" name="complexity[]" class="checkbox_selection complexity">
+                <input type="radio" name="complexity[]" class="checkbox_selection complexity">
+                <input type="radio" name="complexity[]" class="checkbox_selection complexity">
+                <input type="radio" name="complexity[]" class="checkbox_selection complexity">
+                <input type="radio" name="complexity[]" class="checkbox_selection complexity">
+                <input type="radio" name="complexity[]" class="checkbox_selection complexity">
+                <input type="radio" name="complexity[]" class="checkbox_selection complexity">
+            </div>
+            <div class="number">10</div>
+        </div>
+
+
+        <label for="hours" class="title_select">Необходимое время в часах</label>
+        <input class="input_settings" type="number" id="hours">
+
+        <div class="buttons">
+            <button id="save" onclick="save()">Сохранить дедлайн</button>
+            <button id="delete" onclick="deleteElement()">Удалить дедлайн</button>
+        </div>
+    </div>
+</div>
+<div class="main">
+    <div class="teerlist_container">
+        <div class="buttons_teerlist">
+            <button class="btns_tierlist" onclick="createDeadLine()">Создать дедлайн</button>
+            <button class="btns_tierlist" onclick="sort()">Отсортировать по дате</button>
+            <button class="btns_tierlist" onclick="generate()">Сгенерировать тирлист</button>
+            <button class="btns_tierlist" onclick="remove()">Удалить просроченные</button>
+            <button class="btns_tierlist" onclick="export_()">Экспорт</button>
+            <button class="btns_tierlist" onclick="import_()">Импорт</button>
+            <button class="btns_tierlist" onclick="reset()">Очистить</button>
+        </div>
+        <div class="table">
+            <div class="table_row">
+                <div class="title_row S">
+                    S
+                </div>
+                <div id="S" class="teer_row teer_table_row">
+                </div>
+            </div>
+            <div class="table_row">
+                <div class="title_row A">
+                    A
+                </div>
+                <div id="A" class="teer_row teer_table_row">
+                </div>
+            </div>
+            <div class="table_row">
+                <div class="title_row B">
+                    B
+                </div>
+                <div id="B" class="teer_row teer_table_row">
+                </div>
+            </div>
+            <div class="table_row">
+                <div class="title_row B">
+                    C
+                </div>
+                <div id="C" class="teer_row teer_table_row">
+                </div>
+            </div>
+            <div class="table_row">
+                <div class="title_row D">
+                    D
+                </div>
+                <div id="D" class="teer_row teer_table_row">
+                </div>
+            </div>
+        </div>
+        <div id="N" class="teer_row" >
+        </div>
+    </div>
+</div>
+</body>
+</html>
